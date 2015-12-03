@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car Recommender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQuery UI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Javascript File -->
+    
+    <!-- Temporary CSS -->
+    <style>
+    #header {
+      background-color: #193441;
+    }
+    #app-title {
+    color: #fcfff5;
+    }
+    #interest-selector {
+    background-color: #3e606f;
+    color: #fcfff5;
+    }
+    .results {
+    background-color: #fcfff5;
+    }
+    #share {
+      background-color: #d1dbbd;
+    }
+    .padding {
+      margin-bottom: 1rem;
+    }
+    .center {
+      display: inline-block;
+      margin: 0 auto;
+    }
+    .vcenter {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+    }
+    li {
+      list-style: none;
+    }
+    </style>
+  </head>
+  <body class="well">
+
+    <!-- Begin Header -->
+
+    <section id="header" class="container">
+        <div class="row">
+          <div class="col-xs-4 col-xs-offset-2">
+            <img class="img-square img-responsive logo-image" src="images/logo2.png" alt="" width="210" height="110">
+          </div>
+          <div class="col-xs-6">
+            <h2 id="app-title" class="header-style text-center">VEHICLE RESEARCHER</h2>
+          </div>
+        </div>
+    </section>
+
+    <!-- End Header Begin Interest Selection-->
+
+    <section id="interest-selector" class="container">
+      
+      <div class="row">
+        <div class="col-xs-4 vcenter">
+          <h4>Select Vehicle Make:</h4>
+        </div>
+        <div class="col-xs-4 vcenter">
+          <select class="form-control" name="make" id="make-drop" onchange="run()">
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-4 vcenter">
+          <h4>Select Vehicle Model:</h4>
+        </div>
+        <div class="col-xs-4 vcenter">
+          <select class="form-control" name="model" id="model-drop">
+          </select>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-4 vcenter">
+          <h4>Select Vehicle Year:</h4>
+        </div>
+        <div class="col-xs-4 vcenter">
+          <select class="form-control" name="year" id="year-drop">
+          </select>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- End Interest Selection Begin Results-->
+
+    <ul id="results" class="container">
+    
+    <li id="result1">
+    <div class="row">
+    <div class="col-xs-12">
+    <h4>Vehicle Review</h4>
+    <p class="vehicle-review"></p>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-xs-12">
+    <h4>Vehicle Pros</h4>
+    <p class="vehicle-pro"></p>
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-xs-12">
+    <h4>Vehicle Cons</h4>
+    <p class="vehicle-con"></p>
+    </div>
+    </div>
+    </li>
+
+    </ul>
+
+    <!-- End Results Section Begin Share and Footer-->
+
+    <section id="share" class="container">
+      <div class="row">            
+        <div class="col-xs-12">
+          <h4 class="text-center">Share</h4>
+          <p class="text-center"><span><a href="http://www.facebook.com"><i class="fa fa-facebook fa-lg"></i></a></span>
+          <span class="text-right"><a href="http://www.twitter.com"><i class="fa fa-twitter fa-lg"></i></a></span>
+          <span class="text-right"><a href="http://www.linkedin.com"><i class="fa fa-linkedin fa-lg"></i></a></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <!-- Custom Script 
+    <script src="js/autocomplete.js"></script> -->
+    
+    <!-- Custom Script -->
+    <script src="js/app.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    
+    <!-- JQuery UI -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  </body>
+</html>

@@ -171,8 +171,12 @@ function getPhotos(selectedMake, selectedModel, selectedYear) {
 //Function shows results
 function showResults(result){
 	$('.vehicle-review').html(result.editorial.review);
+	$('.whats-new').html(result.editorial.whatsNew)
 	$('.vehicle-pro').html(result.editorial.pro);
 	$('.vehicle-con').html(result.editorial.con);
+	$('.content-link').html(result.editorial.link);
+	console.log(result.editorial.link);
+	$('.content-link').attr("href", result.editorial.link);
 }
 
 
